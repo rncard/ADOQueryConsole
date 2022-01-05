@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВыполнитьЗапрос" id="10">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыполнитьЗапрос</CommandName>
+				<ExtendedTooltip name="ФормаВыполнитьЗапросРасширеннаяПодсказка" id="11"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЭлементов" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа элементов</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЭлементовРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<InputField name="СтрокаПодключения" id="25">
+					<DataPath>СтрокаПодключения</DataPath>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="СтрокаПодключенияКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="СтрокаПодключенияРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<UsualGroup name="ГруппаТекстЗапроса" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст запроса</v8:content>
+						</v8:item>
+					</Title>
+					<Behavior>Collapsible</Behavior>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<ExtendedTooltip name="ГруппаТекстЗапросаРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<TextDocumentField name="ТекстЗапроса" id="28">
+							<DataPath>ТекстЗапроса</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="30"/>
+						</TextDocumentField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРезультатЗапроса" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат запроса</v8:content>
+						</v8:item>
+					</Title>
+					<Behavior>Collapsible</Behavior>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<ExtendedTooltip name="ГруппаРезультатЗапросаРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<SpreadSheetDocumentField name="РезультатЗапроса" id="31">
+							<DataPath>РезультатЗапроса</DataPath>
+							<ContextMenu name="РезультатЗапросаКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="РезультатЗапросаРасширеннаяПодсказка" id="33"/>
+						</SpreadSheetDocumentField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.КонсольЗапросовВоВнешнююБазу</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СтрокаПодключения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка подключения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстЗапроса" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатЗапроса" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьЗапрос" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить запрос</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыполнитьЗапрос</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>
